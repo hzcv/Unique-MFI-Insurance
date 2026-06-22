@@ -1,6 +1,7 @@
 import os
 import random
 import time
+import asyncio
 
 from telegram import (
     Update,
@@ -247,14 +248,14 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
         [
             InlineKeyboardButton(
-                "Insurance",
+                "𝐼𝑁𝑆𝑈𝑅𝐴𝑁𝐶𝐸",
                 callback_data="insurance"
             )
         ],
 
         [
             InlineKeyboardButton(
-                "MFI",
+                "𝑀𝐹𝐼",
                 callback_data="mfi"
             )
         ]
@@ -263,8 +264,9 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     reply_markup = InlineKeyboardMarkup(keyboard)
 
-    await update.message.reply_text(
-        "Choose Generator:",
+    await update.message.reply_photo(
+        photo="YOUR_IMAGE_LINK",
+        "⚡ 𝘾𝙝𝙤𝙤𝙨𝙚 𝙂𝙚𝙣𝙚𝙧𝙖𝙩𝙤𝙧 ⚡:",
         reply_markup=reply_markup
     )
 
@@ -364,6 +366,16 @@ async def generate_numbers(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     # Send numbers
     result = "\n".join(generated_list)
+
+    # Temporary message
+    boss = await update.message.reply_text("𝐋𝐞𝐠𝐚𝐜𝐲 𝐨𝐟 𝐒𝐚𝐢𝐲𝐚𝐧 🚬")
+
+    await asyncio.sleep(2)
+
+    try:
+        await boss.delete()
+    except:
+        pass
 
     await update.message.reply_text(result)
 
