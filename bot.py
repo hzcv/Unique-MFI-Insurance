@@ -21,12 +21,12 @@ from telegram.ext import (
 # =====================================
 # BOT TOKEN
 # =====================================
-BOT_TOKEN = "YOUR_BOT_TOKEN"
+BOT_TOKEN = "8601806532:AAE4I-CzoakQyeCrwEHjo7tNygXg_4iA1-A"
 
 # =====================================
 # ADMIN ID
 # =====================================
-ADMIN_ID = 123456789
+ADMIN_ID = 7847432032
 
 # =====================================
 # FILES
@@ -265,8 +265,8 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     reply_markup = InlineKeyboardMarkup(keyboard)
 
     await update.message.reply_photo(
-        photo="YOUR_IMAGE_LINK",
-        "⚡ 𝘾𝙝𝙤𝙤𝙨𝙚 𝙂𝙚𝙣𝙚𝙧𝙖𝙩𝙤𝙧 ⚡:",
+        photo="https://wallpapercave.com/wp/wp2897370.jpg",
+        caption="⚡ 𝘾𝙝𝙤𝙤𝙨𝙚 𝙂𝙚𝙣𝙚𝙧𝙖𝙩𝙤𝙧 ⚡:",
         reply_markup=reply_markup
     )
 
