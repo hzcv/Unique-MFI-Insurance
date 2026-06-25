@@ -21,12 +21,12 @@ from telegram.ext import (
 # =====================================
 # BOT TOKEN
 # =====================================
-BOT_TOKEN = "8601806532:AAE4I-CzoakQyeCrwEHjo7tNygXg_4iA1-A"
+BOT_TOKEN = "YOUR_TG_BOTOKEN"
 
 # =====================================
 # ADMIN ID
 # =====================================
-ADMIN_ID = 7847432032
+ADMIN_ID = 
 
 # =====================================
 # FILES
